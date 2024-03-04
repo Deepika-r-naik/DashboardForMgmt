@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Admin panel</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="topbar">
+            <div class="logo">
+                <h2>Walmart AHR.</h2>
+            </div>
+            <div class="search">
+                <input type="text" name="search" placeholder="search here">
+                <label for="search"><i class="fas fa-search"></i></label>
+            </div>
+            <i class="fas fa-bell"></i>
+            <div class="user">
+                <img src="img/user.png" alt="">
+            </div>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-th-large"></i>
+                        <div>Dashboard</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-server"></i>
+                        <div>Device Info</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-solid fa-shield-check"></i>
+                        <div>In Warranty</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-users"></i>
+                        <div>Hardwar Vendor</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-chart-bar"></i>
+                        <div>Analytics</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-check"></i>
+                        <div>No. of Tickets</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                        <div>Settings</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-question"></i>
+                        <div>Help</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">1217</div>
+                        <div class="card-name">In Warranty</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-solid fa-shield-check"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">42</div>
+                        <div class="card-name">No. Of Tickets</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">4626</div>
+                        <div class="card-name">Total Devices</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-server"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">500</div>
+                        <div class="card-name">Devices Approaching Warranty Expiry</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-hourglass-end"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="charts">
+                <div class="chart">
+                    <h2>Warranty info by Vendor</h2>
+                    <div>
+                        <canvas id="lineChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart doughnut-chart">
+                    <h2>Hardware Type</h2>
+                    <div>
+                        <canvas id="doughnut"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <section>
+                <div class="search-boxes">
+                    <div class="search-box">
+                        <label for="device-search">Search by Device:</label>
+                        <input type="text" id="device-search" name="device-search" placeholder="Enter device name">
+                    </div>
+                    <div class="search-box">
+                        <label for="server-search">Search by Server Name:</label>
+                        <input type="text" id="server-search" name="server-search" placeholder="Enter server name">
+                    </div>
+                </div>
+                <div class="table">
+                    <div class="section--title">
+                        <h3 class="title">Device Info</h3>
+                        <div class="pagination">
+                            <span class="page-numbers">1</span>
+                            <span class="page-numbers">2</span>
+                            <!-- Add more page numbers as needed -->
+                            <span class="next-page">Next</span>
+                        </div>
+                    </div>
+                <div class="table">
+                    <div class="section--title">
+                        
+                        <div></div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Server Name</th>
+                                <th>Device ID</th>
+                                <th>Hardware Vendor</th>
+                                <th>Warranty End Date</th>
+                                <th>Application Support Group</th>
+                                
+                                
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Server 1</td>
+                            <td>#231234</td>
+                            <td>Dell</td>
+                            <td>2024-03-15</td>
+                            <td>GroupC</td>
+                            
+                        </tr>
+                        <tr>
+                            <tr>
+                                <td>Server1</td>
+                                <td>12345</td>
+                                <td>Dell</td>
+                                <td>2023-03-15</td>
+                                <td>GroupA</td>
+                            </tr>
+                            <tr>
+                                <td>Server2</td>
+                                <td>56789</td>
+                                <td>HP</td>
+                                <td>2023-05-20</td>
+                                <td>GroupB</td>
+                            </tr>
+                            <tr>
+                                <td>Server3</td>
+                                <td>98765</td>
+                                <td>Lenovo</td>
+                                <td>2024-01-10</td>
+                                <td>GroupC</td>
+                            </tr>
+                            <tr>
+                                <td>Server4</td>
+                                <td>45678</td>
+                                <td>ASUS</td>
+                                <td>2022-11-30</td>
+                                <td>GroupA</td>
+                            </tr>
+                            <tr>
+                                <td>Server5</td>
+                                <td>65432</td>
+                                <td>HP</td>
+                                <td>2023-09-25</td>
+                                <td>GroupB</td>
+                            </tr>
+                        
+
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+        </section>
+
+        </div>
+
+    
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+<script src="chart1.js"></script>
+<script src="chart2.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var rows = document.querySelectorAll("tbody tr");
+
+        rows.forEach(function(row) {
+            var warrantyEndDate = new Date(row.querySelector(".warranty-end-date").textContent);
+            var currentDate = new Date();
+
+            // Calculate the difference in days
+            var differenceInDays = Math.floor((warrantyEndDate - currentDate) / (1000 * 60 * 60 * 24));
+
+            // Add a class based on the difference
+            if (differenceInDays <= 30) {
+                row.classList.add("near-expiration");
+            } else {
+                row.classList.add("long-expiration");
+            }
+        });
+    });
+</script>
+
+
+
+</body>
+
+</html>
